@@ -255,10 +255,10 @@ def f3kdb_mod(clip: vs.VideoNode,
     if bits > 16:
         clip = depth(clip, 16)
 
-    if hasattr(core, 'neo_f3kdb'):
-        f3kdb = partial(core.neo_f3kdb.Deband)
-    else:
-        f3kdb = partial(core.f3kdb.Deband)
+    try:
+        f3kdb = core.neo_f3kdb.Deband
+    except AttributeError:
+        f3kdb = core.f3kdb.Deband
 
     deb = f3kdb(clip, range, y, cb, cr, grainy, grainc, keep_tv_range=tv_range, output_depth=min(get_depth(clip), 16))
 
