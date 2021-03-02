@@ -19,7 +19,6 @@ Dependencies
 
 lvsfunc depends on the following third-party scripts:
 
-* `debandshit <https://github.com/LightArrowsEXE/debandshit>`_
 * `edi_rpow2 <https://gist.github.com/YamashitaRen/020c497524e794779d9c>`_
 * `havsfunc <https://github.com/HomeOfVapourSynthEvolution/havsfunc>`_
 * `kagefunc <https://github.com/Irrational-Encoding-Wizardry/kagefunc>`_
@@ -58,6 +57,7 @@ Modules
 
    lvsfunc.aa
    lvsfunc.comparison
+   lvsfunc.deband
    lvsfunc.deinterlace
    lvsfunc.mask
    lvsfunc.kernels
@@ -83,6 +83,11 @@ Functions
    lvsfunc.comparison.stack_planes
    lvsfunc.comparison.stack_vertical
    lvsfunc.comparison.tile
+   lvsfunc.deband.Dither_bilateral
+   lvsfunc.deband.f3kbilateral
+   lvsfunc.deband.f3kpf
+   lvsfunc.deband.lfdeband
+   lvsfunc.deband.f3kdb_mod
    lvsfunc.deinterlace.deblend
    lvsfunc.deinterlace.decomb
    lvsfunc.deinterlace.dir_deshimmer
@@ -141,6 +146,22 @@ lvsfunc.comparison
    lvsfunc.comparison.tile
 
 .. automodule:: lvsfunc.comparison
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lvsfunc.deband
+-------------------
+
+.. autosummary::
+
+   lvsfunc.deband.Dither_bilateral
+   lvsfunc.deband.f3kbilateral
+   lvsfunc.deband.f3kpf
+   lvsfunc.deband.lfdeband
+   lvsfunc.deband.f3kdb_mod
+
+.. automodule:: lvsfunc.deband
    :members:
    :undoc-members:
    :show-inheritance:
